@@ -17,6 +17,22 @@ function countCharacters(string) {
 
 function duplicateCharMinCount(string, minCount) {
 	// Your code here 
+	let dict = {}
+	let list = []
+	for (let i = 0; i < string.length; i++) {
+		if (dict[string[i]] === undefined) {
+			dict[string[i]] = 1
+		} else {
+			dict[string[i]]++
+		}
+	}
+	for (const key in dict) {
+		if (dict[key] >= minCount) {
+			list.push(key)
+		}
+	}
+	// console.log(list)
+	return list;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

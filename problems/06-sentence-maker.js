@@ -12,7 +12,9 @@ sentenceMaker('The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'd
 ***********************************************************************/
 
 // Your code here 
-
+const sentenceMaker = (...args) => {
+	return args.join(' ') + '!'
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
 	module.exports = sentenceMaker;
